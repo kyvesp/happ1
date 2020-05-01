@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -317,6 +318,71 @@ html {
 
 body {
   color: #F9C802;
-  background: #000; }
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh; }
+
+.article {
+  background: #b7bbc2;
+  max-width: 374px;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 4px; }
+  .article__title {
+    font-family: 'Roboto', sans-serif; }
+  .article__description {
+    color: #000000;
+    font-size: 112px;
+    font-family: 'Roboto', sans-serif; }
+  .article__button {
+    background: #FFFFFF;
+    height: 47px;
+    min-width: 216px;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18	px;
+    border: none; }
+  .article__button--add {
+    -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: background .4s ease-in-out;
+    -o-transition: background .4s ease-in-out;
+    transition: background .4s ease-in-out; }
+    .article__button--add:hover {
+      background: #51aefa; }
+  .article__button--del {
+    margin-bottom: 20px;
+    background: none;
+    text-decoration: underline;
+    -webkit-transition: color .2s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: color .2s ease-in-out, -webkit-transform .3s ease-in-out;
+    -o-transition: color .2s ease-in-out, transform .3s ease-in-out;
+    transition: color .2s ease-in-out, transform .3s ease-in-out;
+    transition: color .2s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out; }
+    .article__button--del:hover {
+      color: #f3342d;
+      -webkit-transform: scale(1.07);
+          -ms-transform: scale(1.07);
+              transform: scale(1.07); }
 
 /*# sourceMappingURL=main.css.map */
