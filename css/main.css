@@ -373,14 +373,16 @@ body {
   .article__button--del {
     margin-bottom: 20px;
     background: none;
-    text-decoration: underline;
-    -webkit-transition: color .2s ease-in-out, -webkit-transform .3s ease-in-out;
-    transition: color .2s ease-in-out, -webkit-transform .3s ease-in-out;
-    -o-transition: color .2s ease-in-out, transform .3s ease-in-out;
-    transition: color .2s ease-in-out, transform .3s ease-in-out;
-    transition: color .2s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out; }
+    -webkit-text-decoration: #000000 underline;
+            text-decoration: #000000 underline;
+    -webkit-transition: -webkit-text-decoration .2s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: -webkit-text-decoration .2s ease-in-out, -webkit-transform .3s ease-in-out;
+    -o-transition: text-decoration .2s ease-in-out, transform .3s ease-in-out;
+    transition: text-decoration .2s ease-in-out, transform .3s ease-in-out;
+    transition: text-decoration .2s ease-in-out, transform .3s ease-in-out, -webkit-text-decoration .2s ease-in-out, -webkit-transform .3s ease-in-out; }
     .article__button--del:hover {
-      color: #f3342d;
+      -webkit-text-decoration: #f32d2d underline;
+              text-decoration: #f32d2d underline;
       -webkit-transform: scale(1.07);
           -ms-transform: scale(1.07);
               transform: scale(1.07); }
