@@ -308,6 +308,22 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes fillChange {
+  0% {
+    fill: #2196f3; }
+  50% {
+    fill: #101c88; }
+  100% {
+    fill: #2196f3; } }
+
+@keyframes fillChange {
+  0% {
+    fill: #2196f3; }
+  50% {
+    fill: #101c88; }
+  100% {
+    fill: #2196f3; } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -329,6 +345,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh; }
+
+.water {
+  -webkit-animation: fillChange 2s ease-in-out infinite;
+          animation: fillChange 2s ease-in-out infinite; }
 
 .article {
   background: #b7bbc2;
