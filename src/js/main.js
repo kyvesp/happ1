@@ -18,8 +18,8 @@ if ('serviceWorker' in navigator) {
 
 
 /* const count = document.querySelector('.article__description--js');
-const add = document.querySelector('.article__button--addjs');
-const del = document.querySelector('.article__button--deljs');
+const add = document.querySelector('.article__button--add-js');
+const del = document.querySelector('.article__button--del-js');
 
 add.addEventListener('click', (e) => {
 	count.innerHTML = parseInt(count.innerHTML) + 1;
@@ -34,8 +34,8 @@ del.addEventListener('click', (e) => {
 
 
 const count = document.querySelector('.article__description--js');
-const add = document.querySelector('.article__button--addjs');
-const del = document.querySelector('.article__button--deljs');
+const add = document.querySelector('.article__button--add-js');
+const del = document.querySelector('.article__button--del-js');
 const key = new Date().toISOString().slice(0, 10);
 
 if (!localStorage.getItem(key)) {
