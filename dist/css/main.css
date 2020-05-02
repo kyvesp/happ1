@@ -308,6 +308,22 @@ template {
 [hidden] {
   display: none; }
 
+@-webkit-keyframes fillChange {
+  0% {
+    fill: #2196f3; }
+  50% {
+    fill: #101c88; }
+  100% {
+    fill: #2196f3; } }
+
+@keyframes fillChange {
+  0% {
+    fill: #2196f3; }
+  50% {
+    fill: #101c88; }
+  100% {
+    fill: #2196f3; } }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -329,6 +345,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh; }
+
+.water {
+  -webkit-animation: fillChange 2s ease-in-out infinite;
+          animation: fillChange 2s ease-in-out infinite; }
 
 .article {
   background: #b7bbc2;
@@ -373,14 +393,16 @@ body {
   .article__button--del {
     margin-bottom: 20px;
     background: none;
-    text-decoration: underline;
-    -webkit-transition: color .2s ease-in-out, -webkit-transform .3s ease-in-out;
-    transition: color .2s ease-in-out, -webkit-transform .3s ease-in-out;
-    -o-transition: color .2s ease-in-out, transform .3s ease-in-out;
-    transition: color .2s ease-in-out, transform .3s ease-in-out;
-    transition: color .2s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out; }
+    -webkit-text-decoration: #000000 underline;
+            text-decoration: #000000 underline;
+    -webkit-transition: -webkit-text-decoration .2s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: -webkit-text-decoration .2s ease-in-out, -webkit-transform .3s ease-in-out;
+    -o-transition: text-decoration .2s ease-in-out, transform .3s ease-in-out;
+    transition: text-decoration .2s ease-in-out, transform .3s ease-in-out;
+    transition: text-decoration .2s ease-in-out, transform .3s ease-in-out, -webkit-text-decoration .2s ease-in-out, -webkit-transform .3s ease-in-out; }
     .article__button--del:hover {
-      color: #f3342d;
+      -webkit-text-decoration: #f32d2d underline;
+              text-decoration: #f32d2d underline;
       -webkit-transform: scale(1.07);
           -ms-transform: scale(1.07);
               transform: scale(1.07); }

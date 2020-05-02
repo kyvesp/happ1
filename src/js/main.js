@@ -17,4 +17,42 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 
-console.log(`Hi`);
+/* const count = document.querySelector('.article__description--js');
+const add = document.querySelector('.article__button--addjs');
+const del = document.querySelector('.article__button--deljs');
+
+add.addEventListener('click', (e) => {
+	count.innerHTML = parseInt(count.innerHTML) + 1;
+});
+
+del.addEventListener('click', (e) => {
+	const currentValue = parseInt(count.innerHTML);
+	if (currentValue > 0) {
+		count.innerHTML = currentValue - 1;
+	}
+}); */
+
+
+const count = document.querySelector('.article__description--js');
+const add = document.querySelector('.article__button--addjs');
+const del = document.querySelector('.article__button--deljs');
+const key = new Date().toISOString().slice(0, 10);
+
+if (!localStorage.getItem(key)) {
+	localStorage.setItem(key, 0)
+	count.innerHTML = '0';
+} else {
+	count.innerHTML = localStorage.getItem(key);
+}
+
+add.addEventListener('click', (e) => {
+	localStorage.setItem(key, parseInt(localStorage.getItem(key)) + 1);
+	count.innerHTML = localStorage.getItem(key);
+})
+
+del.addEventListener('click', (e) => {
+	const currentValue = parseInt(localStorage.getItem(key));
+	if (currentValue > 0) {
+		localStorage.setItem(key, parseInt(localStorage.getItem(key)) - 1);
+		count.innerHTML = localStorage.getItem(key);
+}})

@@ -2,6 +2,18 @@
 @import "_variables";
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@keyframes fillChange {
+	0% {
+		fill: rgb(33, 150, 243);
+	}
+	50% {
+		fill: rgb(16, 28, 136);
+	}
+	100% {
+		fill: rgb(33, 150, 243);
+	}
+}
+
 html {
   box-sizing: border-box;
 }
@@ -17,6 +29,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
+}
+
+.water {
+	animation: fillChange 2s ease-in-out infinite;
 }
 
 .article {
@@ -55,10 +71,10 @@ body {
 	&__button--del {
 		margin-bottom: 20px;
 		background: none;
-		text-decoration: underline;
-		transition: color .2s ease-in-out, transform .3s ease-in-out;
+		text-decoration: #000000 underline;
+		transition: text-decoration .2s ease-in-out, transform .3s ease-in-out;
 		&:hover {
-			color: rgb(243, 52, 45);
+			text-decoration: rgb(243, 45, 45) underline;
 			transform: scale(1.07);
 		}
 	}
